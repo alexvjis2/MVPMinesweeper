@@ -6,9 +6,9 @@ Minesweeper with Model-View-Presenter architecture (Passive View).
 classes (BoardPresenter and StartMenuPresenter) to manage BoardDisplay and StartMenuDisplay respectively.
 
 - **Open-Closed Principle**: beyond the possibility of extend public functionality or overwriting public methods, the Board
-implementation delegates much of the most critical functionality to the implementation of anonymous Cell. It is possible to extend 
-Board with a new implementation of Cell by overwriting the protected getCellImplementation(int rows, int cols) method which 
-construct and provides the default anonymous Cell implementation.
+implementation delegates much of the most critical functionality to anonymous implementations of Cell. It is possible to extend 
+Board with a new implementation of Cell by overwriting the protected getCellImplementation(int row, int col) method which 
+construct and provides the default implementation.
 
 - **Liskov Substitution Principle**: the Presenter depends on the View interfaces, making it possible to replace 
 implementations (see BoardDisplay and its fully replaceable swing implementation).
